@@ -42,7 +42,7 @@ public class QueuedAudioPlayer: AudioPlayer, QueueManagerDelegate {
         event.queueIndex.emit(data: (currentIndex, nil))
     }
     
-    override func reset() {
+    public override func reset() {
         super.reset()
         queueManager.clearQueue()
     }
