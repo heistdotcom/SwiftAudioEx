@@ -184,9 +184,9 @@ class QueueManager<T> {
      */
     @discardableResult
     public func removeItem(at index: Int) throws -> T {
-        guard index != currentIndex else {
-            throw APError.QueueError.invalidIndex(index: index, message: "Cannot remove the current item!")
-        }
+        // guard index != currentIndex else {
+        //     throw APError.QueueError.invalidIndex(index: index, message: "Cannot remove the current item!")
+        // }
         
         guard index >= 0 && items.count > index else {
             throw APError.QueueError.invalidIndex(index: index, message: "Index for removal has to be positive and smaller than the count of current items (\(items.count)).")
