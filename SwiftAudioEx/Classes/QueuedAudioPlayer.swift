@@ -34,6 +34,11 @@ public class QueuedAudioPlayer: AudioPlayer, QueueManagerDelegate {
     public var currentIndex: Int {
         queue.currentIndex
     }
+    
+    public override func reset() {
+        super.reset()
+        queueManager.clearQueue()
+    }
 
     override public func clear() {
         queue.clearQueue()
